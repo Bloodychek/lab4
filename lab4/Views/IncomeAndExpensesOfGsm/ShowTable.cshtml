@@ -1,0 +1,26 @@
+﻿@model IEnumerable<lab3.IncomeAndExpensesOfGsm>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3> IncomeAndExpensesOfGsm</h3>
+    <table border="1">
+        <tr class="header">
+            <td><p>Number of capacity</p></td>
+            <td><p>Income or expense perliter<p></td>
+            <td><p>Date and time of the operation income or expense<p></td>
+            <td><p>Responsible for the operation<p></td>
+        </tr>
+        @foreach (lab3.IncomeAndExpensesOfGsm i in Model)
+        {
+            <tr>
+                <td><p>@i.NumberOfCapacity</p></td>
+                <td><p>@i.IncomeOrExpensePerliter</p></td>
+                <td><p>@i.DateAndTimeOfTheOperationIncomeOrExpense</p></td>
+                <td><p>@i.ResponsibleForTheOperation</p></td>
+            </tr>
+        }
+    </table>
+</div>
+

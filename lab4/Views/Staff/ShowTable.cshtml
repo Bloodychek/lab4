@@ -1,0 +1,26 @@
+﻿@model IEnumerable<lab3.Staff>
+    
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3> Staff</h3>
+    <table border="1">
+        <tr class="header">
+            <td><p>Full Name</p></td>
+            <td><p>Staff Age<p></td>
+            <td><p>Staff Function<p></td>
+            <td><p>Working hours for a week</p></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><p>@Html.DisplayFor(modelItem => item.FullName)</p></td>
+                <td><p>@Html.DisplayFor(modelItem => item.StaffAge)</p></td>
+                <td><p>@Html.DisplayFor(modelItem => item.StaffFunction)</p></td>
+                <td><p>@Html.DisplayFor(modelItem => item.WorkingHoursForAweek)</p></td>
+            </tr>
+        }
+    </table>
+</div>
+

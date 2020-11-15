@@ -1,0 +1,24 @@
+﻿@model IEnumerable<lab3.Gsm>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3> Gsm</h3>
+    <table border="1">
+        <tr class="header">
+            <td><p>id by GSM</p></td>
+            <td><p>Type of GSM<p></td>
+            <td><p>TTK of Type<p></td>
+        </tr>
+        @foreach (lab3.Gsm g in Model)
+        {
+            <tr>
+                <td><p>@g.GSmid</p></td>
+                <td><p>@g.TypeOfGsm</p></td>
+                <td><p>@g.TTkofType</p></td>
+            </tr>
+        }
+    </table>
+</div>
+
